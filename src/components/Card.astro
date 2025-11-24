@@ -1,0 +1,48 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+
+const {
+  url = "#",
+  cardimage = "",
+  cardimagealt = "",
+  cardtitle = "",
+  cardtid = "",
+  cardbue = "", // billede af buen
+} = Astro.props;
+---
+
+<a href={url} class="block max-w-xs">
+  <div class="rounded-3xl overflow-hidden bg-[var(--cards-bg-primary)] text-white shadow-lg relative">
+    <!-- Top-billede -->
+    <div class="h-48 w-full overflow-hidden">
+      <img src={cardimage} alt={cardimagealt} class="w-full h-full object-cover" />
+    </div>
+
+    <!-- BUE billedet -->
+    <img src={cardbue} alt="Dekorativ bue" class="w-full -mt-4 pointer-events-none select-none" />
+
+    <!-- Content -->
+    <div class="px-6 pb-6 pt-2">
+      <Heading htmlheading="h5" size="xsmall" font="heading" color="light" weight="bold" class="mb-6">
+        {cardtitle}
+      </Heading>
+
+      <div class="flex items-center justify-between">
+        <!-- Tid -->
+        <div class="flex items-center gap-2 opacity-90">
+          <span class="text-xl">🕒</span>
+          <Text teksttype="brødtekst" weight="regular" font="body">
+            {cardtid}
+          </Text>
+        </div>
+
+        <!-- PLAY KNAP PLADS (Ingen styling endnu) -->
+        <div class="w-16 h-12 flex items-center justify-center border border-white rounded-full opacity-40">
+          <!-- Her skal play-knappen indsættes senere -->
+          <span class="text-sm">Play</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
