@@ -1,0 +1,106 @@
+---
+import Card from "./Card.astro";
+
+const cards = [
+  { image: "/lillefro.webp", title: "Lille frø", tid: "8 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "9 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "3 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
+];
+
+const totalCards = cards.length;
+const maxVisibleDesktop = 4; // du hade 4 här i din kod
+const desktopCardWidth = 100 / maxVisibleDesktop;
+---
+
+<section class="">
+  <div
+    x-data={`{
+      active: 0,
+      total: ${totalCards},
+      cardWidth: ${desktopCardWidth},
+      maxVisibleDesktop: ${maxVisibleDesktop},
+
+      init() {
+        const updateWidth = () => {
+          const w = window.innerWidth;
+          if (w >= 1024) {
+            this.cardWidth = 100 / 4; // desktop 4 kort
+          } else if (w >= 768) {
+            this.cardWidth = 100 / 4; 
+          } else if (w >= 568) {
+            this.cardWidth = 100 / 3; 
+          } else {
+            this.cardWidth = 100 / 2;
+          }
+        };
+        updateWidth();
+        window.addEventListener("resize", updateWidth);
+      },
+
+      prev() { 
+        this.active = (this.active - 1 + this.total) % this.total;
+      },
+
+      next() { 
+        this.active = (this.active + 1) % this.total;
+      }
+    }`}
+    class="relative mx-auto mt-10 w-full max-w-screen px-0"
+  >
+
+    <!-- Karrusel container -->
+    <div class="overflow-hidden">
+      <div 
+        class="flex transition-transform duration-500"
+        :style="`transform: translateX(-${active * cardWidth}%);`"
+      >
+        {cards.map((card) => (
+          <div 
+            class="box-border flex-shrink-0 px-5"
+            :style="`width: ${cardWidth}%; max-width: ${cardWidth}%; flex: 0 0 ${cardWidth}%;`"
+          >
+            <Card
+              cardimage={card.image}
+              cardimagealt={card.title}
+              cardtitle={card.title}
+              cardtid={card.tid}
+              cardbue={card.bue}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Navigation left -->
+    <button
+      type="button"
+      class="absolute -left-10 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
+      @click="prev()"
+      aria-label="Forrige"
+    >
+     <svg class="w-7 h-7 bg-button-quaternary-disabled hover:bg-button-quaternary-hover text-main-text-secondary rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+</svg>
+
+    </button>
+
+    <!-- Navigation right -->
+    <button
+      type="button"
+      class="absolute -right-10 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
+      @click="next()"
+      aria-label="Næste"
+    >
+     <svg class="w-7 h-7 bg-button-quaternary-disabled hover:bg-button-quaternary-hover text-main-text-secondary rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+</svg>
+
+    </button>
+
+  </div>
+</section>

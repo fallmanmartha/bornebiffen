@@ -3,7 +3,7 @@
 const { variant = "primary", size = "large", shadow = "effect" } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = " rounded-full";
+const buttonStyling = "font-heading rounded-full inline-flex items-center justify-center gap-2";
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
 const variantClasses = {
@@ -16,12 +16,12 @@ const variantClasses = {
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
   large: "text-cta-large px-9 py-4",
-  small: "text-cta-small px-6 py-2.5",
+  small: "text-cta-small px-4 py-2",
 };
 
 const stylingClasses = {
-  effect: "shadow-lg",
-  noeffect: "",
+  effect: "shadow-lg font-semibold",
+  noeffect: "font-semibold",
 };
 ---
 
