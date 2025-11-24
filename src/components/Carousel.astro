@@ -31,9 +31,9 @@ const desktopCardWidth = 100 / maxVisibleDesktop;
           if (w >= 1024) {
             this.cardWidth = 100 / 4; // desktop 4 kort
           } else if (w >= 768) {
-            this.cardWidth = 100 / 4; 
-          } else if (w >= 568) {
             this.cardWidth = 100 / 3; 
+          } else if (w >= 568) {
+            this.cardWidth = 100 / 2; 
           } else {
             this.cardWidth = 100 / 2;
           }
@@ -61,7 +61,7 @@ const desktopCardWidth = 100 / maxVisibleDesktop;
       >
         {cards.map((card) => (
           <div 
-            class="box-border flex-shrink-0 px-5"
+            class="box-border flex-shrink-0 lg:px-5 px-3"
             :style="`width: ${cardWidth}%; max-width: ${cardWidth}%; flex: 0 0 ${cardWidth}%;`"
           >
             <Card
@@ -79,7 +79,7 @@ const desktopCardWidth = 100 / maxVisibleDesktop;
     <!-- Navigation left -->
     <button
       type="button"
-      class="absolute -left-10 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
+      class="absolute lg:-left-10 left-3 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
       @click="prev()"
       aria-label="Forrige"
     >
@@ -92,7 +92,7 @@ const desktopCardWidth = 100 / maxVisibleDesktop;
     <!-- Navigation right -->
     <button
       type="button"
-      class="absolute -right-10 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
+      class="absolute lg:-right-10 right-3 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
       @click="next()"
       aria-label="Næste"
     >
