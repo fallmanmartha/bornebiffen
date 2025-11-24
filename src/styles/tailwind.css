@@ -118,7 +118,7 @@
   --color-button-third-hover: var(--color-purple-300);
 
   --color-button-quaternary-disabled: var(--color-lilac-200);
-  --color-button-quaternary-hover: var(--color-lilac-400);
+  --color-button-quaternary-hover: var(--color-lilac-500);
 }
 
 @layer base {
