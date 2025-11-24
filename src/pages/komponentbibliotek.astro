@@ -4,6 +4,7 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import Tag from "../components/Tag.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
@@ -71,7 +72,6 @@ import thumbsup from "../assets/images/thumbsup.png";
     </section>
 
     <section>
-      <Heading><Button>Default knap</Button></Heading>
       <Heading><Button variant="primary" size="small" shadow="noeffect">Button variant: primary size small</Button></Heading>
       <Heading><Button variant="primary" size="large" shadow="noeffect">Button variant: primary size large</Button></Heading>
 
@@ -83,6 +83,16 @@ import thumbsup from "../assets/images/thumbsup.png";
 
       <Heading><Button variant="quaternary" size="small" shadow="noeffect">Button variant: secondary size small</Button></Heading>
       <Heading><Button variant="quaternary" size="large" shadow="noeffect">Variant: secondary size large</Button></Heading>
+    </section>
+
+    <section>
+      <Heading htmlheading="h2" size="medium">Tags</Heading>
+      <div class="mt-10">
+        <Text><Tag variant="primary" shadow="effect">Tag variant: Primary</Tag></Text>
+      </div>
+      <div class="mt-10">
+        <Text><Tag variant="secondary" shadow="effect">Tag variant: Secondary</Tag></Text>
+      </div>
     </section>
     <!-- Slut på Buttons komponent instanser -->
   </main>

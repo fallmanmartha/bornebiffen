@@ -1,0 +1,16 @@
+---
+// Henter parametrene fra Astro.props
+const { variant = "primary" } = Astro.props;
+
+//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
+const tagStyling = " rounded-full px-4 py-2 border-2 text-mobile-p";
+
+//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter
+const variantClasses = {
+  primary: "bg-tags-bg/40 border-tags-border text-main-text-secondary" /* border-primary-500 */,
+  secondary: "bg-tags-bg border-tags-border text-main-text-secondary" /* border-secondary-500 */,
+};
+---
+
+<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
+<tag class:list={[tagStyling, variantClasses[variant]]}><slot /></tag>
