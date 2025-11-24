@@ -16,12 +16,11 @@
   --color-violet-200: #bb9bce;
   --color-violet-300: #9c68b6;
   --color-violet-400: #6a457d;
-  --color-vioet-500: #5a3b6a;
-  --color-vioet-600: #492e57;
-  --color-vioet-700: #392345;
-  --color-vioet-800: #2b1934;
-  --color-vioet-900: #1b0d21;
-
+  --color-violet-500: #5a3b6a;
+  --color-violet-600: #492e57;
+  --color-violet-700: #392345;
+  --color-violet-800: #2b1934;
+  --color-violet-900: #1b0d21;
   /* Purple */
   --color-purple-50: #ece3f7;
   --color-purple-100: #d8c4ed;
@@ -88,38 +87,38 @@
 
   /* Cards */
 
-  --cards-text-primary: var(--color-lilac-100);
-  --cards-text-secondary: var(--color-violet-700);
+  --color-cards-text-primary: var(--color-lilac-100);
+  --color-cards-text-secondary: var(--color-violet-700);
 
-  --cards-bg-primary: var(--color-violet-400);
-  --cards-bg-secondary: var(--color-violet-200);
+  --color-cards-bg-primary: var(--color-violet-400);
+  --color-cards-bg-secondary: var(--color-violet-200);
 
   /* Main */
-  --main-bg-body: var(--color-lilac-900);
-  --main-bg-nav: var(--color-lilac-200);
-  --main-bg-footer: var(--color-lilac-200);
+  --color-main-bg-body: var(--color-lilac-900);
+  --color-main-bg-nav: var(--color-lilac-200);
+  --color-main-bg-footer: var(--color-lilac-200);
 
-  --main-text-primary: var(--color-lilac-100);
-  --main-text-secondary: var(--color-lilac-700);
+  --color-main-text-primary: var(--color-lilac-100);
+  --color-main-text-secondary: var(--color-lilac-800);
 
   /* Tags */
 
-  --tags-color-primary: var(--color-lilac-400);
-  --tags-bg-primary: rgb(var(--color-lilac-400) / 0.4);
+  --color-tags-primary: var(--color-lilac-400);
+  --color-tags-bg-primary: rgb(var(--color-lilac-400) / 0.4);
 
   /* Buttons */
 
-  --button-primary-disabled: var(--color-yellow-400);
-  --button-primary-hover: var(--color-yellow-300);
+  --color-button-primary-disabled: var(--color-yellow-400);
+  --color-button-primary-hover: var(--color-yellow-300);
 
-  --button-secondary-disabled: var(--color-purple-400);
-  --button-secondary-hover: var(--color-purple-300);
+  --color-button-secondary-disabled: var(--color-purple-400);
+  --color-button-secondary-hover: var(--color-purple-300);
 
-  --button-third-disabled: var(--color-purple-400);
-  --button-third-hover: var(--color-purple-300);
+  --color-button-third-disabled: var(--color-purple-400);
+  --color-button-third-hover: var(--color-purple-300);
 
-  --button-quaternary-disabled: var(--color-lilac-200);
-  --button-quaternary-hover: var(--color-lilac-400);
+  --color-button-quaternary-disabled: var(--color-lilac-200);
+  --color-button-quaternary-hover: var(--color-lilac-400);
 }
 
 @layer base {
