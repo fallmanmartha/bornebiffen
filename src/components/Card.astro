@@ -1,6 +1,7 @@
 ---
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
+import Button from "./Button.astro";
 
 const {
   url = "#",
@@ -13,7 +14,7 @@ const {
 ---
 
 <a href={url} class="block max-w-xs">
-  <div class="rounded-3xl overflow-hidden bg-[var(--cards-bg-primary)] text-white shadow-lg relative">
+  <div class="rounded-3xl overflow-hidden bg-[var(--color-cards-bg-primary)] text-white shadow-lg relative">
     <!-- Top-billede -->
     <div class="h-48 w-full overflow-hidden">
       <img src={cardimage} alt={cardimagealt} class="w-full h-full object-cover" />
@@ -31,17 +32,17 @@ const {
       <div class="flex items-center justify-between">
         <!-- Tid -->
         <div class="flex items-center gap-2 opacity-90">
-          <span class="text-xl">🕒</span>
+          <img src="/watch.svg" alt="Clock icon" class="w-6 h-6" />
           <Text teksttype="brødtekst" weight="regular" font="body">
             {cardtid}
           </Text>
         </div>
 
-        <!-- PLAY KNAP PLADS (Ingen styling endnu) -->
-        <div class="w-16 h-12 flex items-center justify-center border border-white rounded-full opacity-40">
-          <!-- Her skal play-knappen indsættes senere -->
-          <span class="text-sm">Play</span>
-        </div>
+        <Button variant="quaternary" size="small" shadow="effect">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" class="w-8 h-8">
+            <polygon points="10,7 25,16 10,25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></polygon>
+          </svg>
+        </Button>
       </div>
     </div>
   </div>
