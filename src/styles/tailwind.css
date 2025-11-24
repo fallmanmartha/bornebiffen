@@ -1,50 +1,132 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
-@font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
-}
-
 @theme {
   /* Her tilføjes theme variable // tokens */
 
-  /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+  /*FARVER */
+
+  /* Violet */
+  --color-violet-50: #ede6f2;
+  --color-violet-100: #dccce6;
+  --color-violet-200: #bb9bce;
+  --color-violet-300: #9c68b6;
+  --color-violet-400: #6a457d;
+  --color-vioet-500: #5a3b6a;
+  --color-vioet-600: #492e57;
+  --color-vioet-700: #392345;
+  --color-vioet-800: #2b1934;
+  --color-vioet-900: #1b0d21;
+
+  /* Purple */
+  --color-purple-50: #ece3f7;
+  --color-purple-100: #d8c4ed;
+  --color-purple-200: #b689db;
+  --color-purple-300: #8e4dbb;
+  --color-purple-400: #582d75;
+  --color-purple-500: #4b2665;
+  --color-purple-600: #3d1d53;
+  --color-purple-700: #331745;
+  --color-purple-800: #251034;
+  --color-purple-900: #1a0926;
+
+  /* Lilac */
+  --color-lilac-50: #fdfcfe;
+  --color-lilac-100: #f9f5fd;
+  --color-lilac-200: #f6edfa;
+  --color-lilac-300: #eee4f8;
+  --color-lilac-400: #eadef5;
+  --color-lilac-500: #cfabe6;
+  --color-lilac-600: #b577d8;
+  --color-lilac-700: #924ab7;
+  --color-lilac-800: #63307a;
+  --color-lilac-900: #371846;
+
+  /* Yellow */
+  --color-yellow-50: #fff9ee;
+  --color-yellow-100: #fff3dd;
+  --color-yellow-200: #ffe5b4;
+  --color-yellow-300: #ffd980;
+  --color-yellow-400: #ffcc01;
+  --color-yellow-500: #d1a600;
+  --color-yellow-600: #a48200;
+  --color-yellow-700: #7a6002;
+  --color-yellow-800: #524000;
+  --color-yellow-900: #2e2300;
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --font-heading: "Mulish", sans-serif;
+  --font-body: "Dm Sans", sans-serif;
+
+  --text-mobile-h1: 40px;
+  --text-mobile-h2: 32px;
+  --text-mobile-h3: 28px;
+  --text-mobile-h4: 24px;
+  --text-mobile-h5: 20px;
+  --text-mobile-p: 16px;
+
+  --text-computer-h1: 64px;
+  --text-computer-h2: 60px;
+  --text-computer-h3: 40px;
+  --text-computer-h4: 32px;
+  --text-computer-h5: 22px;
+  --text-computer-p: 20px;
+
+  /* CTA */
+
+  /* Desktop */
+  --text-cta-large: 20px;
+
+  /* Mobile */
+  --text-cta-small: 16px;
+
+  /* Tokens */
+
+  /* Cards */
+
+  --cards-text-primary: var(--color-lilac-100);
+  --cards-text-secondary: var(--color-violet-700);
+
+  --cards-bg-primary: var(--color-violet-400);
+  --cards-bg-secondary: var(--color-violet-200);
+
+  /* Main */
+  --main-bg-body: var(--color-lilac-900);
+  --main-bg-nav: var(--color-lilac-200);
+  --main-bg-footer: var(--color-lilac-200);
+
+  --main-text-primary: var(--color-lilac-100);
+  --main-text-secondary: var(--color-lilac-700);
+
+  /* Tags */
+
+  --tags-color-primary: var(--color-lilac-400);
+  --tags-bg-primary: rgb(var(--color-lilac-400) / 0.4);
+
+  /* Buttons */
+
+  --button-primary-disabled: var(--color-yellow-400);
+  --button-primary-hover: var(--color-yellow-300);
+
+  --button-secondary-disabled: var(--color-purple-400);
+  --button-secondary-hover: var(--color-purple-300);
+
+  --button-third-disabled: var(--color-purple-400);
+  --button-third-hover: var(--color-purple-300);
+
+  --button-quaternary-disabled: var(--color-lilac-200);
+  --button-quaternary-hover: var(--color-lilac-400);
 }
 
 @layer base {
-
 }
 
-@layer components{
-
+@layer components {
 }
 
-@layer utilities{
-  
+@layer utilities {
 }
