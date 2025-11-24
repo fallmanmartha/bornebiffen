@@ -103,8 +103,8 @@
 
   /* Tags */
 
-  --color-tags-primary: var(--color-lilac-400);
-  --color-tags-bg-primary: rgb(var(--color-lilac-400) / 0.4);
+  --color-tags-bg: var(--color-lilac-400);
+  --color-tags-border: var(--color-lilac-800);
 
   /* Buttons */
 
