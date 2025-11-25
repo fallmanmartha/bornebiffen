@@ -1,0 +1,166 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Carousel from "../components/Carousel.astro";
+
+// 1. Dina card-arrayer (lägg egna bilder + texter här)
+const continueCards = [
+  { image: "/lillefro.webp", title: "Lille frø", tid: "8 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
+];
+
+const foryouCards = [
+  { image: "/lillefro.webp", title: "Anbefalet film 1", tid: "12 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Anbefalet film 2", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Anbefalet film 3", tid: "9 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Anbefalet film 4", tid: "6 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Anbefalet film 1", tid: "12 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Anbefalet film 2", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Anbefalet film 3", tid: "9 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Anbefalet film 4", tid: "6 min", bue: "/buelillacard.png" },
+];
+
+const magicCards = [
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+];
+
+const natureCards = [
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+];
+
+const learningCards = [
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+];
+
+const miniCards = [
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+];
+---
+
+<MainLayout title="BørneBiffen">
+  <main class="container mx-auto p-5">
+    <section class="text-main-text-primary">
+      <!-- SE VIDERE -->
+      <section>
+        <div>
+          <Heading size="large" htmlheading="h2">Se videre</Heading>
+
+          <Carousel cards={continueCards} />
+        </div>
+      </section>
+
+      <!-- CHARACTERS -->
+      <section class="text-cards-text-secondary bg-cards-bg-secondary mt-44 rounded-4xl">
+        <Heading size="large" htmlheading="h2">Se film efter karakter</Heading>
+      </section>
+
+      <!-- MULTI CAROUSELS -->
+      <section class="mt-44">
+        <Heading size="large" htmlheading="h2">Se flere film & serier</Heading>
+
+        <div class="mt-10">
+          <Heading size="medium" htmlheading="h3">For dig</Heading>
+
+          <div class="lg:grid lg:grid-cols-4 lg:gap-5">
+            <div class="lg:col-span-1 hidden lg:block w-auto">
+              <img src="/foryou.png" alt="for you icon" />
+            </div>
+
+            <div class="lg:col-start-2 lg:col-span-3">
+              <Carousel cards={foryouCards} />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <Heading size="medium" htmlheading="h3">Eventyr & magi</Heading>
+
+          <div class="lg:grid lg:grid-cols-4 lg:gap-5">
+            <div class="lg:col-span-1 hidden lg:block w-auto">
+              <img src="/magi.png" alt="for you icon" />
+            </div>
+
+            <div class="lg:col-start-2 lg:col-span-3">
+              <Carousel cards={magicCards} />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <Heading size="medium" htmlheading="h3">Dyr & natur</Heading>
+
+          <div class="lg:grid lg:grid-cols-4 lg:gap-5">
+            <div class="lg:col-span-1 hidden lg:block w-auto">
+              <img src="/nature.png" alt="for you icon" />
+            </div>
+
+            <div class="lg:col-start-2 lg:col-span-3">
+              <Carousel cards={natureCards} />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <Heading size="medium" htmlheading="h3">Læring & verden</Heading>
+
+          <div class="lg:grid lg:grid-cols-4 lg:gap-5">
+            <div class="lg:col-span-1 hidden lg:block w-auto">
+              <img src="/learning.png" alt="for you icon" />
+            </div>
+
+            <div class="lg:col-start-2 lg:col-span-3">
+              <Carousel cards={learningCards} />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <Heading size="medium" htmlheading="h3">For de mindste</Heading>
+
+          <div class="lg:grid lg:grid-cols-4 lg:gap-5">
+            <div class="lg:col-span-1 hidden lg:block w-auto">
+              <img src="/mini.png" alt="for you icon" />
+            </div>
+
+            <div class="lg:col-start-2 lg:col-span-3">
+              <Carousel cards={miniCards} />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</MainLayout>
