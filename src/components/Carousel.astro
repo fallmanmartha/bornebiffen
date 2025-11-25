@@ -1,67 +1,68 @@
 ---
 import Card from "./Card.astro";
-
-const cards = [
-  { image: "/lillefro.webp", title: "Lille frø", tid: "8 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "7 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "9 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "3 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
-];
-
+const { cards = [], maxVisible = 4 } = Astro.props;
 const totalCards = cards.length;
-const maxVisibleDesktop = 4; // du hade 4 här i din kod
-const desktopCardWidth = 100 / maxVisibleDesktop;
 ---
 
-<section class="">
+<section>
   <div
     x-data={`{
       active: 0,
       total: ${totalCards},
-      cardWidth: ${desktopCardWidth},
-      maxVisibleDesktop: ${maxVisibleDesktop},
+      slidesPerView: 1,
+      cardWidth: 100,
+      maxVisible: ${maxVisible},
 
       init() {
-        const updateWidth = () => {
-          const w = window.innerWidth;
-          if (w >= 1024) {
-            this.cardWidth = 100 / 4; // desktop 4 kort
-          } else if (w >= 768) {
-            this.cardWidth = 100 / 3; 
-          } else if (w >= 568) {
-            this.cardWidth = 100 / 2; 
+        const updateSlides = () => {
+          const w = this.$el.clientWidth || this.$el.offsetWidth || window.innerWidth;
+
+          if (w >= 1200) {
+
+          this.slidesPerView = Math.min(this.maxVisible, 4);
+          } else if (w >= 640) {
+
+            this.slidesPerView = Math.min(this.maxVisible, 3);
+          } else if (w >= 550) {
+
+          this.slidesPerView = Math.min(this.maxVisible, 2);
           } else {
-            this.cardWidth = 100 / 2;
+
+          this.slidesPerView = 1.5;
           }
+
+          this.cardWidth = 100 / this.slidesPerView;
+
+          const maxActive = Math.max(0, this.total - Math.ceil(this.slidesPerView));
+          if (this.active > maxActive) this.active = maxActive;
         };
-        updateWidth();
-        window.addEventListener("resize", updateWidth);
+
+        updateSlides();
+        window.addEventListener('resize', updateSlides);
       },
 
-      prev() { 
-        this.active = (this.active - 1 + this.total) % this.total;
+      prev() {
+        if (this.total <= this.slidesPerView) return;
+        this.active = Math.max(this.active - 1, 0);
       },
 
-      next() { 
-        this.active = (this.active + 1) % this.total;
+      next() {
+        if (this.total <= this.slidesPerView) return;
+        const maxActive = Math.max(0, this.total - Math.ceil(this.slidesPerView));
+        this.active = Math.min(this.active + 1, maxActive);
       }
     }`}
-    class="relative mx-auto mt-10 w-full max-w-screen px-0"
+    class="relative mx-auto mt-10 w-full max-w-screen"
   >
-
     <!-- Karrusel container -->
-    <div class="overflow-hidden">
-      <div 
+    <div class="overflow-hidden py-2">
+      <div
         class="flex transition-transform duration-500"
         :style="`transform: translateX(-${active * cardWidth}%);`"
       >
         {cards.map((card) => (
-          <div 
-            class="box-border flex-shrink-0 lg:px-5 px-3"
+          <div
+            class="flex-shrink-0 px-3 lg:px-5"
             :style="`width: ${cardWidth}%; max-width: ${cardWidth}%; flex: 0 0 ${cardWidth}%;`"
           >
             <Card
@@ -76,31 +77,50 @@ const desktopCardWidth = 100 / maxVisibleDesktop;
       </div>
     </div>
 
-    <!-- Navigation left -->
-    <button
-      type="button"
-      class="absolute lg:-left-10 left-3 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
-      @click="prev()"
-      aria-label="Forrige"
-    >
-     <svg class="w-7 h-7 bg-button-quaternary-disabled hover:bg-button-quaternary-hover text-main-text-secondary rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
-</svg>
+    {totalCards > 0 && (
+      <>
+        <!-- Vänster pil -->
+        <button
+          class="absolute left-3 lg:-left-10 top-1/2 flex h-15 w-15 -translate-y-1/2 items-center justify-center rounded-full transition hover:scale-105"
+          @click="prev()"
+        >
+          <svg
+            class="h-8 w-8 rounded-full bg-button-quaternary-disabled text-main-text-secondary hover:bg-button-quaternary-hover"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m15 19-7-7 7-7"
+            />
+          </svg>
+        </button>
 
-    </button>
-
-    <!-- Navigation right -->
-    <button
-      type="button"
-      class="absolute lg:-right-10 right-3 top-1/2 -translate-y-1/2 flex h-15 w-15 items-center justify-center rounded-full transition hover:scale-105"
-      @click="next()"
-      aria-label="Næste"
-    >
-     <svg class="w-7 h-7 bg-button-quaternary-disabled hover:bg-button-quaternary-hover text-main-text-secondary rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
-</svg>
-
-    </button>
-
+        <!-- Höger pil -->
+        <button
+          class="absolute right-3 lg:-right-10 top-1/2 flex h-15 w-15 -translate-y-1/2 items-center justify-center rounded-full transition hover:scale-105"
+          @click="next()"
+        >
+          <svg
+            class="h-8 w-8 rounded-full bg-button-quaternary-disabled text-main-text-secondary hover:bg-button-quaternary-hover"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m9 5 7 7-7 7"
+            />
+          </svg>
+        </button>
+      </>
+    )}
   </div>
 </section>
