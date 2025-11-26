@@ -1,0 +1,26 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+---
+
+<div class="bg-cards-bg-secondary rounded-3xl mt-20 p-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:mt-30">
+  <!-- Tekst -->
+  <div class="mb-0 lg:mb-10">
+    <div class="mb-4">
+      <Heading htmlheading="h2" size="large" color="dark">
+        Håndplukkede<br />børnefilm
+      </Heading>
+    </div>
+
+    <Text skrifttype="brødtekst" color="dark"
+      >Alle filmene er valgt ud fra et princip om, at de skal være i øjenhøjde med børnene og passe til deres alder. Filmene må også gerne give det velkendte et twist og vække til eftertanke. Også hos resten af familien. <br />
+      <br /> Filmene er af høj kunstnerisk kvalitet og kommer fra Danmark og mange andre lande, som fx Tyskland, Sverige, Slovakiet, Frankrig, Spanien, Australien og Sydkorea. <br />
+      <br />Filmene er nøje udvalgt over en årrække af Det Danske Filminstitut og rummer en række forskellige stilarter, udtryk og fortællinger. Ligesom der er lagt vægt på, at den kulturelle mangfoldighed er i centrum.</Text
+    >
+  </div>
+
+  <!-- Billede -->
+  <div class="flex justify-center items-center mb-10">
+    <img src="/group.png" alt="Børnefilm figurer" class="max-w-lg w-full object-contain" />
+  </div>
+</div>
