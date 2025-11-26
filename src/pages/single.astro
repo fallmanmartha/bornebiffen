@@ -8,27 +8,27 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 
 const nextCards = [
-  { image: "/lillefro.webp", title: "Lille frø", tid: "8 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "7 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/sevidere1.webp", title: "Rita & Krokodille - Forår", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/sevidere2.webp", title: "Rita & Krokodille - Blåbær", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/sevidere3.webp", title: "Rita & Krokodille - Snevejr", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/sevidere4.webp", title: "Rita & Krokodille - Camping", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/sevidere5.webp", title: "Rita & Krokodille - Nat", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/sevidere6.webp", title: "Rita & Krokodille - Fisketuren", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/sevidere7.webp", title: "Rita & Krokodille - I biografen", tid: "5 min", bue: "/buelillacard.png" },
 ];
 
 const similarCards = [
-  { image: "/lillefro.webp", title: "Lille frø", tid: "8 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "7 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
+  { image: "/image-40.webp", title: "Mis med de blå øjne", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/image-39.webp", title: "Cirkeline - Storbyens mus", tid: "62 min", bue: "/buelillacard.png" },
+  { image: "/image-13.webp", title: "Pipungerne - Hittebarnet", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-41.webp", title: "Cirkeline - Klodsmus", tid: "13 min", bue: "/buelillacard.png" },
 ];
 
 const similar2Cards = [
-  { image: "/lillefro.webp", title: "Lille frø", tid: "8 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "7 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
+  { image: "/image-3.webp", title: "Den sidste efterårsdag", tid: "8 min", bue: "/buelillacard.png" },
+  { image: "/image-4.webp", title: "Vitello tigger en masse slik", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-5.webp", title: "Lygtefisk", tid: "3 min", bue: "/buelillacard.png" },
+  { image: "/image-11.webp", title: "Hvem er vred?", tid: "4 min", bue: "/buelillacard.png" },
 ];
 ---
 
@@ -126,14 +126,14 @@ const similar2Cards = [
     </div>
   </section>
 
-  <section class="lg:px-15 px-5 mt-15">
+  <section class="lg:px-20 px-5 mt-15">
     <Heading size="large" htmlheading="h2">Minder om</Heading>
     <div>
       <div class="hidden lg:grid lg:grid-cols-4 gap-5 mt-10">
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-40.webp" cardimagealt="By om natten" cardtitle="Mis med de blå øjne" cardtid="11 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-39.webp" cardimagealt="By om natten" cardtitle="Cirkeline - Storbyens mus" cardtid="8 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-13.webp" cardimagealt="By om natten" cardtitle="Pipungerne - Hittebarnet" cardtid="5 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-41.webp" cardimagealt="By om natten" cardtitle="Cirkeline - Klodsmus" cardtid="13 min" cardbue="/buelillacard.png" />
       </div>
 
       <div class="block lg:hidden">
@@ -143,10 +143,10 @@ const similar2Cards = [
 
     <div class="mt-15">
       <div class="hidden lg:grid lg:grid-cols-4 gap-5">
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
-        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-3.webp" cardimagealt="By om natten" cardtitle="Den sidste efterårsdag" cardtid="8 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-4.webp" cardimagealt="By om natten" cardtitle="Vitello tigger en masse slik" cardtid="7 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-5.webp" cardimagealt="By om natten" cardtitle="Lygtefisk" cardtid="3 min" cardbue="/buelillacard.png" />
+        <Card cardimage="/image-11.webp" cardimagealt="By om natten" cardtitle="Hvem er vred?" cardtid="4 min" cardbue="/buelillacard.png" />
       </div>
 
       <div class="block lg:hidden">
