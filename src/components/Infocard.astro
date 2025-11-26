@@ -1,0 +1,33 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+
+const {
+  title = "overskrift",
+  content = "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  image = "/info1.svg",
+} = Astro.props;
+---
+
+<div
+  class="rounded-3xl overflow-hidden shadow-lg bg-[var(--color-cards-bg-secondary)] main-text-secondary px-10 pt-10 pb-12"
+>
+  <!-- image -->
+  <div>
+    <img src={image} alt="" class="w-full" />
+  </div>
+
+  <!-- overskrift -->
+  <div class="pb-6 relative">
+    <Heading htmlheading="h4" size="small" font="heading" weight="bold">
+      {title}
+    </Heading>
+  </div>
+
+  <!-- content-->
+  <div class="">
+    <Text teksttype="brødtekst" font="body">
+      {content}
+    </Text>
+  </div>
+</div>

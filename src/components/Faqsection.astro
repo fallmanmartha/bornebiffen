@@ -1,0 +1,35 @@
+---
+import Heading from "./Heading.astro";
+import Faqcard from "./Faqcard.astro";
+---
+
+<section class="container mx-auto p-5 text-main-text-primary">
+  <div class="mb-10">
+    <Heading htmlheading="h2" size="large" font="heading" weight="bold">
+      Ofte stillede spørgsmål
+    </Heading>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+    <Faqcard
+      title="Hvad er Børnebiffen?"
+      content="Børnebiffen.dk er et bibliotekstilbud skræddersyet til de 3-7 årige og deres forældre. Tjenesten er udviklet og drives i samarbejde mellem DBC Digital og Det Danske Filminstitut og er en del af det samlede Børnebiffen-univers, som formidler kortfilm til børn både i biografen, i børnehaven og derhjemme. "
+      wave="/faqbue2.svg"
+    />
+    <Faqcard
+      title="Hvor ofte kommer der nye film?"
+      content="Børnebiffen.dk rummer næsten 400 titler og vil løbende få tilføjet nye kortfilm. Vi tilføjer som regel nye kortfilm én gang om måneden, så der altid er noget nyt at opdage."
+      wave="/faqbue2.svg"
+    />
+    <Faqcard
+      title="Koster det noget?"
+      content="Nej, det koster ingenting at se film på børnebiffen. Det er gratis for alle, men for at se film skal man logge ind med sit bibliotekslogin. Der er ingen begrænsninger på, hvor mange film man kan se på Børnebiffen.dk."
+      wave="/faqbue2.svg"
+    />
+    <Faqcard
+      title="Er filmerne sikret og godkjent til børn?"
+      content="Alle film er nøje udvalgt og gennemgået af fagfolk, så indholdet er trygt, alderssvarende og helt uden reklamer. Børn kan roligt se med, og forældre kan føle sig trygge."
+      wave="/faqbue2.svg"
+    />
+  </div>
+</section>
