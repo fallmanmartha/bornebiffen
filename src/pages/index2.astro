@@ -1,0 +1,65 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Heading from "../components/Heading.astro";
+import Carousel from "../components/Carousel.astro";
+import Card from "../components/Card.astro";
+import Tag from "../components/Tag.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout title="BørneBiffen">
+  <main class="">
+    <section class="relative w-full overflow-hidden -mt-30 z-1">
+      <div class="absolute inset-0 flex flex-col">
+        <img src="/row1.png" alt="" class="w-full h-3/12 object-fill mb-5 intersect:animate-fade-left intersect:duration-[6000ms]" />
+        <img src="/row2.png" alt="" class="w-full h-6/12 object-fill mb-5 intersect:animate-fade-right intersect:duration-[6000ms]" />
+        <img src="/row3.png" alt="" class="w-full h-3/12 object-fill intersect:animate-fade-left intersect:duration-[6000ms]" />
+      </div>
+
+      <div class="absolute inset-0 bg-main-bg-body/30"></div>
+
+      <div class="relative z-10 max-w-screen-xl mx-auto min-h-screen flex flex-col justify-center">
+        <Heading font="heading" color="light" size="large" htmlheading="h1"> Log ind & se alle film </Heading>
+
+        <div class="lg:w-140 w-100">
+          <Text teksttype="hero" color="light"> Log ind og få adgang til et univers af nøje udvalgte kortfilm, skabt til at begejstre og berige de yngste. Her finder I trygge, reklamefri filmoplevelser, som I kan dele og opdage sammen. </Text>
+        </div>
+
+        <form class="w-140 mt-5">
+          <input type="email" id="email" name="email" placeholder="Udfyld din e-mail" required class="w-full rounded-3xl border-2 border-button-quaternary-disabled bg-main-bg-body/20 px-4 py-3 text-main-text-primary" />
+        </form>
+
+        <div class="flex gap-5 mt-5">
+          <Button variant="primary" size="large" shadow="noeffect" class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-main-text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
+            </svg>
+            Log ind
+          </Button>
+
+          <Button variant="quaternary" size="large" shadow="effect" class="flex items-center gap-2"> Download appen </Button>
+        </div>
+      </div>
+    </section>
+
+    <img class="relative z-50 lg:-mt-20 -mt-10" src="/divider2.svg" alt="divider" />
+
+    <section class="p-0 grid grid-cols-1 lg:grid-cols-4 gap-12 container mx-auto">
+      <div class="pr-2">
+        <Heading htmlheading="h2" size="large" font="heading" color="light" weight="bold">Topfilm</Heading>
+        <Text teksttype="brødtekst" weight="regular" font="body">De mest populære børnefilm lige nu — håndplukket for at underholde, inspirere og skabe gode filmoplevelser for hele familien. </Text>
+      </div>
+      <div class="w-full">
+        <Card url="#" cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+      </div>
+      <div class="w-full">
+        <Card url="#" cardimage="/image-1.webp" cardimagealt="Rita & krokodille" cardtitle="Rita & Krokodille - Skovturen" cardtid="5 min" cardbue="/buelillacard.png" />
+      </div>
+      <div class="w-full">
+        <Card url="#" cardimage="/image-2.webp" cardimagealt="Lille fugl og egern" cardtitle="Den lille fugl og egernet" cardtid="4 min" cardbue="/buelillacard.png" />
+      </div>
+    </section>
+    <Carousel />
+  </main>
+</MainLayout>
