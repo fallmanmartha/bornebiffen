@@ -6,6 +6,8 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import Tag from "../components/Tag.astro";
 import Card from "../components/Card.astro";
+import Faqcard from "../components/Faqcard.astro";
+import Infocard from "../components/Infocard.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
@@ -76,6 +78,7 @@ import thumbsup from "../assets/images/thumbsup.png";
       <Heading><Button variant="quaternary" size="small" shadow="noeffect">Button variant: secondary size small</Button></Heading>
       <Heading><Button variant="quaternary" size="large" shadow="noeffect">Variant: secondary size large</Button></Heading>
     </section>
+    <hr class="my-4" />
 
     <section>
       <Heading htmlheading="h2" size="medium">Tags</Heading>
@@ -92,9 +95,16 @@ import thumbsup from "../assets/images/thumbsup.png";
     <!-- start på typografi -->
     <section>
       <Heading htmlheading="h2" size="medium">Cards</Heading>
+      <div class="lg:grid lg:grid-cols-3 gap-10 mt-10">
+        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Filmenavn" cardtid="X min" cardbue="/buelillacard.png" />
+        <Faqcard
+          title="Spørgsmål?"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          wave="/faqbue2.svg"
+        />
 
-      <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
-      <!-- slut på typografi -->
+        <Infocard title="Brug dit bibliotekslogin" content="Via dit bibliotekslogin kan I nemt streame flere hundrede håndplukkede kortfilm, helt gratis og sikkert. Et trygt og kreativt univers for familien." image="/info3.svg" />
+      </div>
       <hr class="my-4" />
     </section>
   </main>
