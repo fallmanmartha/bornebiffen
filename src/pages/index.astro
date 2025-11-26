@@ -12,19 +12,19 @@ import Card from "../components/Card.astro";
 
 <MainLayout title="BørneBiffen">
   <main class="container mx-auto p-5">
-    <section class="p-10 grid grid-cols-4 gap-12">
+    <section class="p-0 grid grid-cols-1 lg:grid-cols-4 gap-12">
       <div class="pr-2">
         <Heading htmlheading="h2" size="large" font="heading" color="light" weight="bold">Topfilm</Heading>
         <Text teksttype="brødtekst" weight="regular" font="body">De mest populære børnefilm lige nu — håndplukket for at underholde, inspirere og skabe gode filmoplevelser for hele familien. </Text>
       </div>
-      <div>
+      <div class="w-full">
         <Card url="#" cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
       </div>
-      <div>
-        <Card url="#" cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+      <div class="w-full">
+        <Card url="#" cardimage="/image-1.webp" cardimagealt="Rita & krokodille" cardtitle="Rita & Krokodille - Skovturen" cardtid="5 min" cardbue="/buelillacard.png" />
       </div>
-      <div>
-        <Card url="#" cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+      <div class="w-full">
+        <Card url="#" cardimage="/image-2.webp" cardimagealt="Lille fugl og egern" cardtitle="Den lille fugl og egernet" cardtid="4 min" cardbue="/buelillacard.png" />
       </div>
     </section>
     <Carousel />

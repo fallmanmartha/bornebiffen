@@ -5,46 +5,46 @@ import Carousel from "../components/Carousel.astro";
 
 // 1. Dina card-arrayer (lägg egna bilder + texter här)
 const continueCards = [
+  { image: "/image-1.webp", title: "Rita & Krokodille - Skovturen", tid: "5 min", bue: "/buelillacard.png" },
   { image: "/lillefro.webp", title: "Lille frø", tid: "8 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "5 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "7 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "6 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Lille frø", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/image-6.webp", title: "Prik & plet farer vild", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-7.webp", title: "Lillefinger - Klippesprækken", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-8.webp", title: "Ræven og nissen", tid: "9 min", bue: "/buelillacard.png" },
+  { image: "/image-9.webp", title: "Cirkeline - Højt fra træets grønne top", tid: "14 min", bue: "/buelillacard.png" },
+  { image: "/image-10.webp", title: "Jagten på julemanden", tid: "27 min", bue: "/buelillacard.png" },
 ];
 
 const foryouCards = [
-  { image: "/lillefro.webp", title: "Anbefalet film 1", tid: "12 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Anbefalet film 2", tid: "7 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Anbefalet film 3", tid: "9 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Anbefalet film 4", tid: "6 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Anbefalet film 1", tid: "12 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Anbefalet film 2", tid: "7 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Anbefalet film 3", tid: "9 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Anbefalet film 4", tid: "6 min", bue: "/buelillacard.png" },
+  { image: "/image-3.webp", title: "Den sidste efterårsdag", tid: "8 min", bue: "/buelillacard.png" },
+  { image: "/image-4.webp", title: "Vitello tigger en masse slik", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-5.webp", title: "Lygtefisk", tid: "3 min", bue: "/buelillacard.png" },
+  { image: "/image-11.webp", title: "Hvem er vred?", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/image-12.webp", title: "Honningkagen løber hjemmefra", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-13.webp", title: "Pipungerne - hittebarnet", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-14.webp", title: "Løven & musen", tid: "2 min", bue: "/buelillacard.png" },
+  { image: "/image-15.webp", title: "Snuttefilm - Hele natten", tid: "5 min", bue: "/buelillacard.png" },
 ];
 
 const magicCards = [
-  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-16.webp", title: "Rita & Krokodille - Halloween", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-17.webp", title: "Bennys badekar", tid: "41 min", bue: "/buelillacard.png" },
+  { image: "/image-18.webp", title: "Vitello bygger en monsterfælde", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-19.webp", title: "Festlige fugle - Magi", tid: "3 min", bue: "/buelillacard.png" },
+  { image: "/image-20.webp", title: "Prik og Plet og den magiske skotøjsækse", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-21.webp", title: "Den lille ridder", tid: "25 min", bue: "/buelillacard.png" },
+  { image: "/image-22.webp", title: "Sallies historier - Kong Gulleroth", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-23.webp", title: "Krig & kager", tid: "10 min", bue: "/buelillacard.png" },
 ];
 
 const natureCards = [
-  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
-  { image: "/lillefro.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-24.webp", title: "Ville og Vilde Kanin", tid: "29 min", bue: "/buelillacard.png" },
+  { image: "/image-25.webp", title: "Lille Tut - Ræveungen", tid: "7 min", bue: "/buelillacard.png" },
+  { image: "/image-2.webp", title: "Den lille fugl & egernet", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-26.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
+  { image: "/image-27.webp", title: "Favorit 1", tid: "10 min", bue: "/buelillacard.png" },
+  { image: "/image-28.webp", title: "Favorit 2", tid: "4 min", bue: "/buelillacard.png" },
+  { image: "/image-29.webp", title: "Favorit 3", tid: "11 min", bue: "/buelillacard.png" },
+  { image: "/image-30.webp", title: "Favorit 4", tid: "5 min", bue: "/buelillacard.png" },
 ];
 
 const learningCards = [
