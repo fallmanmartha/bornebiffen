@@ -9,11 +9,46 @@ import Carousel from "../components/Carousel.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import Karakter from "../components/Karakter.astro";
+import Faqcard from "../components/Faqcard.astro";
 ---
 
 <MainLayout title="BørneBiffen">
-  <main class="container mx-auto p-5">
-    <section class="p-0 grid grid-cols-1 lg:grid-cols-4 gap-12">
+  <main class="">
+    <section class="relative w-full overflow-hidden -mt-30 z-1">
+      <div class="absolute inset-0 flex flex-col">
+        <img src="/row1.png" alt="" class="w-full h-3/12 object-fill mb-5 intersect:animate-fade-left intersect:duration-[6000ms]" />
+        <img src="/row2.png" alt="" class="w-full h-6/12 object-fill mb-5 intersect:animate-fade-right intersect:duration-[6000ms]" />
+        <img src="/row3.png" alt="" class="w-full h-3/12 object-fill intersect:animate-fade-left intersect:duration-[6000ms]" />
+      </div>
+
+      <div class="absolute inset-0 bg-main-bg-body/30"></div>
+
+      <div class="relative z-10 max-w-screen-xl mx-auto min-h-screen flex flex-col justify-center">
+        <Heading font="heading" color="light" size="large" htmlheading="h1"> Log ind & se alle film </Heading>
+
+        <div class="lg:w-140 w-100">
+          <Text teksttype="hero" color="light"> Log ind og få adgang til et univers af nøje udvalgte kortfilm, skabt til at begejstre og berige de yngste. Her finder I trygge, reklamefri filmoplevelser, som I kan dele og opdage sammen. </Text>
+        </div>
+
+        <form class="w-140 mt-5">
+          <input type="email" id="email" name="email" placeholder="Udfyld din e-mail" required class="w-full rounded-3xl border-2 border-button-quaternary-disabled bg-main-bg-body/20 px-4 py-3 text-main-text-primary" />
+        </form>
+
+        <div class="flex gap-5 mt-5">
+          <Button variant="primary" size="large" shadow="noeffect" class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-main-text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
+            </svg>
+            Log ind
+          </Button>
+
+          <Button variant="quaternary" size="large" shadow="effect" class="flex items-center gap-2"> Download appen </Button>
+        </div>
+      </div>
+    </section>
+
+    <img class="relative z-50 lg:-mt-20 -mt-10" src="/divider2.svg" alt="divider" />
+    <section class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto p-5">
       <div class="pr-2">
         <Heading htmlheading="h2" size="large" font="heading" color="light" weight="bold">Topfilm</Heading>
         <Text teksttype="brødtekst" weight="regular" font="body">De mest populære børnefilm lige nu — håndplukket for at underholde, inspirere og skabe gode filmoplevelser for hele familien. </Text>
@@ -28,8 +63,57 @@ import Karakter from "../components/Karakter.astro";
         <Card url="#" cardimage="/image-2.webp" cardimagealt="Lille fugl og egern" cardtitle="Den lille fugl og egernet" cardtid="4 min" cardbue="/buelillacard.png" />
       </div>
     </section>
-    <section>
-      <Karakter />
+    <section class="container mx-auto p-5">
+      <div class="bg-cards-bg-secondary rounded-3xl mt-20 p-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:mt-30">
+        <!-- Tekst -->
+        <div class="mb-0 lg:mb-10">
+          <div class="mb-4">
+            <Heading htmlheading="h2" size="large" color="dark">
+              Håndplukkede<br />børnefilm
+            </Heading>
+          </div>
+
+          <Text skrifttype="brødtekst" color="dark"
+            >Alle filmene er valgt ud fra et princip om, at de skal være i øjenhøjde med børnene og passe til deres alder. Filmene må også gerne give det velkendte et twist og vække til eftertanke. Også hos resten af familien. <br />
+            <br /> Filmene er af høj kunstnerisk kvalitet og kommer fra Danmark og mange andre lande, som fx Tyskland, Sverige, Slovakiet, Frankrig, Spanien, Australien og Sydkorea. <br />
+            <br />Filmene er nøje udvalgt over en årrække af Det Danske Filminstitut og rummer en række forskellige stilarter, udtryk og fortællinger. Ligesom der er lagt vægt på, at den kulturelle mangfoldighed er i centrum.</Text
+          >
+        </div>
+
+        <!-- Billede -->
+        <div class="flex justify-center items-center mb-10">
+          <img src="/group.png" alt="Børnefilm figurer" class="max-w-lg w-full object-contain" />
+        </div>
+      </div>
     </section>
-  </main></MainLayout
->
+
+    <section class="container mx-auto p-5 text-main-text-primary mt-32">
+      <div class="mb-10">
+        <Heading htmlheading="h2" size="large" font="heading" weight="bold"> Ofte stillede spørgsmål </Heading>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <Faqcard
+          title="Hvad er Børnebiffen?"
+          content="Børnebiffen.dk er et bibliotekstilbud skræddersyet til de 3-7 årige og deres forældre. Tjenesten er udviklet og drives i samarbejde mellem DBC Digital og Det Danske Filminstitut og er en del af det samlede Børnebiffen-univers, som formidler kortfilm til børn både i biografen, i børnehaven og derhjemme. "
+          wave="/faqbue2.svg"
+        />
+        <Faqcard
+          title="Hvor ofte kommer der nye film?"
+          content="Børnebiffen.dk rummer næsten 400 titler og vil løbende få tilføjet nye kortfilm. Vi tilføjer som regel nye kortfilm én gang om måneden, så der altid er noget nyt at opdage."
+          wave="/faqbue2.svg"
+        />
+        <Faqcard
+          title="Koster det noget?"
+          content="Nej, det koster ingenting at se film på børnebiffen. Det er gratis for alle, men for at se film skal man logge ind med sit bibliotekslogin. Der er ingen begrænsninger på, hvor mange film man kan se på Børnebiffen.dk."
+          wave="/faqbue2.svg"
+        />
+        <Faqcard
+          title="Er filmene sikre og godkendt til børn?"
+          content="Alle film er nøje udvalgt og gennemgået af fagfolk, så indholdet er trygt, alderssvarende og helt uden reklamer. Børn kan roligt se med, og forældre kan føle sig trygge."
+          wave="/faqbue2.svg"
+        />
+      </div>
+    </section>
+  </main>
+</MainLayout>
