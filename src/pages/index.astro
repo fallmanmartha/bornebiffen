@@ -20,7 +20,7 @@ import Faqcard from "../components/Faqcard.astro";
 
         <!-- MOVIE ROW 2 WITH LOG IN -->
         <div class="h-95 object-fill mb-5 intersect:animate-fade-right intersect:duration-[6000ms]">
-          <div class="lg:-ml-155 -ml-165 flex gap-5">
+          <div class="lg:-ml-150 -ml-165 flex gap-5">
             <!-- IMG 1 ROW 2 -->
             <img class="h-95" src="/row2_1.png" alt="" />
 
@@ -62,7 +62,7 @@ import Faqcard from "../components/Faqcard.astro";
     <img class="relative z-50 lg:-mt-20 -mt-10" src="/divider2.svg" alt="divider" />
 
     <!-- TOP FILM SECTION -->
-    <section class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto p-5">
+    <section class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto lg:px-5 px-10">
       <div class="pr-2">
         <Heading htmlheading="h2" size="large" font="heading" color="light" weight="bold">Topfilm</Heading>
         <Text teksttype="brødtekst" weight="regular" font="body">De mest populære børnefilm lige nu — håndplukket for at underholde, inspirere og skabe gode filmoplevelser for hele familien. </Text>
@@ -77,8 +77,10 @@ import Faqcard from "../components/Faqcard.astro";
         <Card url="#" cardimage="/image-2.webp" cardimagealt="Lille fugl og egern" cardtitle="Den lille fugl og egernet" cardtid="4 min" cardbue="/buelillacard.png" />
       </div>
     </section>
-    <section class="container mx-auto p-5">
-      <div class="bg-cards-bg-secondary rounded-3xl mt-20 p-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:mt-30">
+
+    <!-- ABOUT CHARACTERS SECTION -->
+    <section class="container mx-auto lg:p-5 p-10">
+      <div class="bg-cards-bg-secondary rounded-3xl lg:mt-30 mt-20 p-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
         <!-- Tekst -->
         <div class="mb-0 lg:mb-10">
           <div class="mb-4">
@@ -101,7 +103,7 @@ import Faqcard from "../components/Faqcard.astro";
       </div>
     </section>
 
-    <section class="container mx-auto p-5 text-main-text-primary mt-32">
+    <section class="container mx-auto lg:p-5 p-10 text-main-text-primary lg:mt-30 mt-20">
       <div class="mb-10">
         <Heading htmlheading="h2" size="large" font="heading" weight="bold"> Ofte stillede spørgsmål </Heading>
       </div>
