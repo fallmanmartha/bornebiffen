@@ -9,40 +9,59 @@ import Faqcard from "../components/Faqcard.astro";
 
 <MainLayout title="BørneBiffen">
   <main class="">
-    <section class="relative w-full overflow-hidden -mt-30 z-1">
-      <div class="absolute inset-0 flex flex-col">
-        <img src="/row1.png" alt="" class="w-full h-3/12 object-fill mb-5 intersect:animate-fade-left intersect:duration-[6000ms]" />
-        <img src="/row2.png" alt="" class="w-full h-6/12 object-fill mb-5 intersect:animate-fade-right intersect:duration-[6000ms]" />
-        <img src="/row3.png" alt="" class="w-full h-3/12 object-fill intersect:animate-fade-left intersect:duration-[6000ms]" />
-      </div>
+    <!-- HERO SECTION -->
+    <section class="relative -mt-30">
+      <div class="relative flex flex-col overflow-hidden">
+        <!-- OVERLAY över ALLT (utom login som vi lyfter över) -->
+        <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
-      <div class="absolute inset-0 bg-main-bg-body/30"></div>
+        <!-- MOVIE ROW 1 -->
+        <img src="/row1.png" alt="" class="h-40 mb-5 intersect:animate-fade-left intersect:duration-[6000ms]" />
 
-      <div class="relative z-10 max-w-screen-xl mx-auto min-h-screen flex flex-col justify-center">
-        <Heading font="heading" color="light" size="large" htmlheading="h1"> Log ind & se alle film </Heading>
+        <!-- MOVIE ROW 2 WITH LOG IN -->
+        <div class="h-95 object-fill mb-5 intersect:animate-fade-right intersect:duration-[6000ms]">
+          <div class="lg:-ml-155 -ml-165 flex gap-5">
+            <!-- IMG 1 ROW 2 -->
+            <img class="h-95" src="/row2_1.png" alt="" />
 
-        <div class="lg:w-140 w-100">
-          <Text teksttype="hero" color="light"> Log ind og få adgang til et univers af nøje udvalgte kortfilm, skabt til at begejstre og berige de yngste. Her finder I trygge, reklamefri filmoplevelser, som I kan dele og opdage sammen. </Text>
+            <!-- LOGIN ROW 2  -->
+            <div class="bg-cards-bg-primary rounded-3xl p-10 flex flex-col justify-center items-start w-160 h-95">
+              <Heading font=" heading" color="light" size="large" htmlheading="h1"> Log ind & se alle film </Heading>
+
+              <div class="lg:w-140 w-90">
+                <Text teksttype="hero" color="light"> Log ind og få adgang til et univers af nøje udvalgte kortfilm, skabt til at begejstre og berige de yngste. </Text>
+              </div>
+
+              <form class="lg:w-130 w-87 mt-5 text-main-text-primary">
+                <input type="email" id="email" name="email" placeholder="Udfyld din e-mail" required class="w-full rounded-3xl border-2 border-button-quaternary-disabled bg-main-bg-body/20 px-4 py-3 text-main-text-primary" />
+              </form>
+
+              <div class="flex gap-3 mt-5">
+                <Button variant="primary" size="large" shadow="noeffect" class="flex items-center gap-2">
+                  <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
+                  </svg>
+                  Log ind
+                </Button>
+                <Button variant="quaternary" size="large" shadow="effect" class="flex items-center gap-2"> Download appen </Button>
+              </div>
+            </div>
+
+            <!-- MOVIE 2 ROW 2 -->
+            <img class="h-95 object-cover" src="/row2_2.png" alt="" />
+            <!-- MOVIE 3 ROW 2 -->
+            <img class="h-95 object-cover" src="/row2_1.png" alt="" />
+          </div>
         </div>
 
-        <form class="w-140 mt-5">
-          <input type="email" id="email" name="email" placeholder="Udfyld din e-mail" required class="w-full rounded-3xl border-2 border-button-quaternary-disabled bg-main-bg-body/20 px-4 py-3 text-main-text-primary" />
-        </form>
-
-        <div class="flex gap-5 mt-5">
-          <Button variant="primary" size="large" shadow="noeffect" class="flex items-center gap-2">
-            <svg class="w-6 h-6 text-main-text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
-            </svg>
-            Log ind
-          </Button>
-
-          <Button variant="quaternary" size="large" shadow="effect" class="flex items-center gap-2"> Download appen </Button>
-        </div>
+        <!-- ROW 3 -->
+        <img src="/row3.png" alt="" class="h-40 intersect:animate-fade-left intersect:duration-[6000ms]" />
       </div>
     </section>
 
     <img class="relative z-50 lg:-mt-20 -mt-10" src="/divider2.svg" alt="divider" />
+
+    <!-- TOP FILM SECTION -->
     <section class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto p-5">
       <div class="pr-2">
         <Heading htmlheading="h2" size="large" font="heading" color="light" weight="bold">Topfilm</Heading>
