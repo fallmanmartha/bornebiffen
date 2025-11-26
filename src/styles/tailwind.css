@@ -69,13 +69,15 @@
   --text-mobile-h4: 24px;
   --text-mobile-h5: 20px;
   --text-mobile-p: 16px;
+  --text-mobile-hero: 16px;
 
   --text-computer-h1: 64px;
-  --text-computer-h2: 60px;
+  --text-computer-h2: 54px;
   --text-computer-h3: 40px;
   --text-computer-h4: 32px;
   --text-computer-h5: 22px;
   --text-computer-p: 20px;
+  --text-computer-hero: 16px;
 
   /* CTA */
 
