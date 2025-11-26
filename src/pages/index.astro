@@ -12,9 +12,20 @@ import Card from "../components/Card.astro";
 
 <MainLayout title="BørneBiffen">
   <main class="container mx-auto p-5">
-    <section class="text-main-text-primary">
-      <Heading htmlheading="h1">Lav noget flot!</Heading>
-      <Text teksttype="brødtekst">Så bliver Anders glad:-)</Text>
+    <section class="p-10 grid grid-cols-4 gap-12">
+      <div class="pr-2">
+        <Heading htmlheading="h2" size="large" font="heading" color="light" weight="bold">Topfilm</Heading>
+        <Text teksttype="brødtekst" weight="regular" font="body">De mest populære børnefilm lige nu — håndplukket for at underholde, inspirere og skabe gode filmoplevelser for hele familien. </Text>
+      </div>
+      <div>
+        <Card url="#" cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+      </div>
+      <div>
+        <Card url="#" cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+      </div>
+      <div>
+        <Card url="#" cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
+      </div>
     </section>
     <Carousel />
   </main></MainLayout
