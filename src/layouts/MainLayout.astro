@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
+import Login from "../components/login.astro";
 const { title } = Astro.props;
 ---
 
@@ -27,6 +28,12 @@ const { title } = Astro.props;
     <script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
   </head>
   <body class="bg-main-bg-body">
+    <Login title="Børnebiffen streaming – unsolicited redesign">
+      {/* Hela din case-sida här inne */}
+      <section class="mt-10">
+        <!-- hero, screenshots, text, osv -->
+      </section>
+    </Login>
     <Header />
 
     <slot />
