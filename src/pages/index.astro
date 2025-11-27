@@ -14,78 +14,36 @@ import Infocard from "../components/Infocard.astro";
     <section class="relative -mt-30">
       <div class="relative flex flex-col overflow-hidden">
         <!-- MOVIE ROW 1 -->
-        <img
-          src="/row1.png"
-          alt=""
-          class="h-40 mb-5 intersect:animate-fade-left intersect:duration-[6000ms]"
-        />
+        <img src="/row1.png" alt="" class="h-40 mb-5 intersect:animate-fade-left intersect:duration-[6000ms]" />
 
         <!-- MOVIE ROW 2 WITH LOG IN -->
-        <div
-          class="h-95 object-fill mb-5 intersect:animate-fade-right intersect:duration-[6000ms]"
-        >
+        <div class="h-95 object-fill mb-5 intersect:animate-fade-right intersect:duration-[6000ms]">
           <div class="lg:-ml-150 -ml-165 flex gap-5">
             <!-- IMG 1 ROW 2 -->
             <img class="h-95" src="/row2_1.png" alt="" />
 
             <!-- LOGIN ROW 2  -->
-            <div
-              class="bg-cards-bg-primary rounded-3xl p-10 flex flex-col h-95"
-            >
-              <Heading
-                font=" heading"
-                color="light"
-                size="large"
-                htmlheading="h1">Log ind & se alle film</Heading
-              >
+            <div class="bg-cards-bg-primary rounded-3xl p-10 flex flex-col h-95">
+              <Heading font=" heading" color="light" size="large" htmlheading="h1">Log ind & se alle film</Heading>
 
               <div class="lg:w-140 w-90">
-                <Text teksttype="hero" color="light">
-                  Log ind og få adgang til et univers af nøje udvalgte kortfilm,
-                  skabt til at begejstre og berige de yngste.
-                </Text>
+                <Text teksttype="hero" color="light"> Log ind og få adgang til et univers af nøje udvalgte kortfilm, skabt til at begejstre og berige de yngste. </Text>
               </div>
 
               <form class="lg:w-130 w-87 mt-5 text-main-text-primary">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Udfyld din e-mail"
-                  required
-                  class="w-full rounded-3xl border-2 border-button-quaternary-disabled bg-main-bg-body/20 px-4 py-3 text-main-text-primary"
-                />
+                <input type="email" id="email" name="email" placeholder="Udfyld din e-mail" required class="w-full rounded-3xl border-2 border-button-quaternary-disabled bg-main-bg-body/20 px-4 py-3 text-main-text-primary" />
               </form>
 
               <div class="flex gap-3 mt-5">
                 <a href="/list">
-                  <Button
-                    variant="primary"
-                    size="large"
-                    shadow="effect"
-                    class="flex items-center gap-2"
-                  >
-                    <svg
-                      class="w-6 h-6 text-gray-800"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"
-                      ></path>
+                  <Button variant="primary" size="large" shadow="effect" class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
                     </svg>
                     Log ind
                   </Button>
                 </a>
-                <Button variant="quaternary" size="large" shadow="effect">
-                  Download appen
-                </Button>
+                <Button variant="quaternary" size="large" shadow="effect"> Download appen </Button>
               </div>
             </div>
 
@@ -97,90 +55,41 @@ import Infocard from "../components/Infocard.astro";
         </div>
 
         <!-- ROW 3 -->
-        <img
-          src="/row3.png"
-          alt="Images"
-          class="h-40 intersect:animate-fade-left intersect:duration-[6000ms]"
-        />
+        <img src="/row3.png" alt="Images" class="h-40 intersect:animate-fade-left intersect:duration-[6000ms]" />
       </div>
     </section>
 
-    <img
-      class="relative z-50 lg:-mt-20 -mt-10"
-      src="/divider2.svg"
-      alt="divider"
-    />
+    <img class="relative z-50 lg:-mt-20 -mt-10" src="/divider2.svg" alt="divider" />
 
     <!-- INFO CARD SECTION -->
-    <section class="container mx-auto p-5 mb-20 lg:mb-20">
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
-        <Infocard
-          title="Børnesikker hjemmeside"
-          content="Her kan børn trygt gå på opdagelse. Alt indhold er nøje udvalgt, reklamefrit og tilpasset deres alder, så de får en sikker og god oplevelse online."
-          image="/info1.svg"
-        />
-        <Infocard
-          title="Download appen"
-          content="Få Børnebiffen på både mobil og tablet. Med appen kan børn nemt og sikkert se film, uanset hvor I er. Download og gå på opdagelse i deres favoritunivers."
-          image="/info2.svg"
-        />
-        <Infocard
-          title="Brug dit bibliotekslogin"
-          content="Via dit bibliotekslogin kan I nemt streame flere hundrede håndplukkede kortfilm – helt gratis og sikkert. Et trygt og kreativt univers for familien."
-          image="/info3.svg"
-        />
+    <section class="lg:mx-15 p-10 mb-20 lg:mb-30 intersect:animate-fade-left intersect:duration-[6000ms]">
+      <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-10">
+        <Infocard title="Børnesikker hjemmeside" content="Her kan børn trygt gå på opdagelse. Alt indhold er nøje udvalgt, reklamefrit og tilpasset deres alder, så de får en sikker og god oplevelse online." image="/info1.svg" />
+        <Infocard title="Download appen" content="Få Børnebiffen på både mobil og tablet. Med appen kan børn nemt og sikkert se film, uanset hvor I er. Download og gå på opdagelse i deres favoritunivers." image="/info2.svg" />
+        <Infocard title="Brug dit bibliotekslogin" content="Via dit bibliotekslogin kan I nemt streame flere hundrede håndplukkede kortfilm – helt gratis og sikkert. Et trygt og kreativt univers for familien." image="/info3.svg" />
       </div>
     </section>
 
     <!-- TOP FILM SECTION -->
-    <section
-      class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto py-3 lg:px-5 px-10 intersect:animate-fade-up intersect:duration-[6000ms]"
-    >
+    <section class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto py-3 lg:px-5 px-10 intersect:animate-fade-up intersect:duration-[6000ms]">
       <div class="pr-2">
-        <Heading htmlheading="h2" size="large" color="light" weight="bold"
-          >Topfilm</Heading
-        >
-        <Text teksttype="brødtekst"
-          >De mest populære børnefilm lige nu — håndplukket for at underholde,
-          inspirere og skabe gode filmoplevelser for hele familien.
-        </Text>
+        <Heading htmlheading="h2" size="large" color="light" weight="bold">Topfilm</Heading>
+        <Text teksttype="brødtekst">De mest populære børnefilm lige nu — håndplukket for at underholde, inspirere og skabe gode filmoplevelser for hele familien. </Text>
       </div>
       <div class="w-full">
-        <Card
-          cardimage="/lillefro.webp"
-          cardimagealt="By om natten"
-          cardtitle="Lille frø"
-          cardtid="8 min"
-          cardbue="/buelillacard.png"
-        />
+        <Card cardimage="/lillefro.webp" cardimagealt="By om natten" cardtitle="Lille frø" cardtid="8 min" cardbue="/buelillacard.png" />
       </div>
       <div class="w-full">
-        <Card
-          cardimage="/image-1.webp"
-          cardimagealt="Rita & krokodille"
-          cardtitle="Rita & Krokodille - Skovturen"
-          cardtid="5 min"
-          cardbue="/buelillacard.png"
-        />
+        <Card cardimage="/image-1.webp" cardimagealt="Rita & krokodille" cardtitle="Rita & Krokodille - Skovturen" cardtid="5 min" cardbue="/buelillacard.png" />
       </div>
       <div class="w-full">
-        <Card
-          cardimage="/image-2.webp"
-          cardimagealt="Lille fugl og egern"
-          cardtitle="Den lille fugl og egernet"
-          cardtid="4 min"
-          cardbue="/buelillacard.png"
-        />
+        <Card cardimage="/image-2.webp" cardimagealt="Lille fugl og egern" cardtitle="Den lille fugl og egernet" cardtid="4 min" cardbue="/buelillacard.png" />
       </div>
     </section>
 
     <!-- ABOUT CHARACTERS SECTION -->
-    <section
-      class="container mx-auto lg:mt-30 mt-20 lg:p-5 p-10 intersect:animate-fade-right intersect:duration-[6000ms]"
-    >
-      <div
-        class="bg-cards-bg-secondary rounded-3xl p-15 grid lg:grid-cols-2 gap-10"
-      >
+    <section class="container mx-auto lg:mt-30 mt-20 lg:p-5 p-10 intersect:animate-fade-right intersect:duration-[6000ms]">
+      <div class="bg-cards-bg-secondary rounded-3xl p-15 grid lg:grid-cols-2 gap-10">
         <!-- Tekst -->
         <div class="mb-0 lg:mb-10">
           <div class="mb-4">
@@ -190,38 +99,22 @@ import Infocard from "../components/Infocard.astro";
           </div>
 
           <Text skrifttype="brødtekst" color="dark"
-            >Alle filmene er valgt ud fra et princip om, at de skal være i
-            øjenhøjde med børnene og passe til deres alder. Filmene må også
-            gerne give det velkendte et twist og vække til eftertanke. Også hos
-            resten af familien. <br />
-            <br /> Filmene er af høj kunstnerisk kvalitet og kommer fra Danmark og
-            mange andre lande, som fx Tyskland, Sverige, Slovakiet, Frankrig, Spanien,
-            Australien og Sydkorea. <br />
-            <br />Filmene er nøje udvalgt over en årrække af Det Danske
-            Filminstitut og rummer en række forskellige stilarter, udtryk og
-            fortællinger. Ligesom der er lagt vægt på, at den kulturelle
-            mangfoldighed er i centrum.</Text
+            >Alle filmene er valgt ud fra et princip om, at de skal være i øjenhøjde med børnene og passe til deres alder. Filmene må også gerne give det velkendte et twist og vække til eftertanke. Også hos resten af familien. <br />
+            <br /> Filmene er af høj kunstnerisk kvalitet og kommer fra Danmark og mange andre lande, som fx Tyskland, Sverige, Slovakiet, Frankrig, Spanien, Australien og Sydkorea. <br />
+            <br />Filmene er nøje udvalgt over en årrække af Det Danske Filminstitut og rummer en række forskellige stilarter, udtryk og fortællinger. Ligesom der er lagt vægt på, at den kulturelle mangfoldighed er i centrum.</Text
           >
         </div>
 
         <!-- Billede -->
         <div class="flex justify-center items-center mb-10">
-          <img
-            src="/group.png"
-            alt="Børnefilm figurer"
-            class="max-w-lg w-full object-contain"
-          />
+          <img src="/group.png" alt="Børnefilm figurer" class="max-w-lg w-full object-contain" />
         </div>
       </div>
     </section>
 
-    <section
-      class="container mx-auto lg:p-5 p-10 text-main-text-primary lg:mt-30 mt-20"
-    >
+    <section class="container mx-auto lg:p-5 p-10 text-main-text-primary lg:mt-30 mt-20">
       <div class="mb-10">
-        <Heading htmlheading="h2" size="large" font="heading" weight="bold">
-          Ofte stillede spørgsmål
-        </Heading>
+        <Heading htmlheading="h2" size="large" font="heading" weight="bold"> Ofte stillede spørgsmål </Heading>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
