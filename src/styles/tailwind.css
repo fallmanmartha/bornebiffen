@@ -123,6 +123,10 @@
 
   --color-button-quaternary-disabled: var(--color-lilac-200);
   --color-button-quaternary-hover: var(--color-lilac-500);
+
+  /* Animationer */
+
+  --animate-bounce-twice: bounceTwice 1.5s ease-out;
 }
 
 @layer base {
@@ -132,4 +136,27 @@
 }
 
 @layer utilities {
+  @keyframes bounceTwice {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+
+    20% {
+      transform: translateY(-40px) rotate(-2deg);
+    }
+    40% {
+      transform: translateY(0) rotate(2deg);
+    }
+
+    60% {
+      transform: translateY(-20px) rotate(2deg);
+    }
+    80% {
+      transform: translateY(0) rotate(-2deg);
+    }
+
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
 }
