@@ -83,13 +83,13 @@ const miniCards = [
       <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 via-yellow-400/80 to-transparent"></div>
 
       <!-- Content ovanpå bilden -->
-      <div class="relative z-10 max-w-screen-xl h-full flex flex-col justify-center px-10 lg:px-25 lg:mt-0 mt-15">
+      <div class="relative z-10 max-w-screen-xl h-full flex flex-col justify-center px-10 lg:px-25 lg:mt-10 mt-15">
         <!-- DIN SEktion Här → Jag bäddar in din exakta kod -->
         <Heading font="heading" color="dark" size="medium" htmlheading="h3">DAGENS FILM</Heading>
         <div class="">
           <Heading font="listlogo" color="dark" size="large" htmlheading="h1"> Den lille fugl & egernet</Heading>
         </div>
-        <div class="flex gap-2 mt-5">
+        <div class="flex gap-2 mt-3">
           <Tag variant="primary" shadow="effect">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
@@ -124,12 +124,12 @@ const miniCards = [
         </div>
       </div>
     </section>
-    <img class="relative z-50 lg:-mt-20 -mt-10 lg:pl-0" src="/divider2.svg" alt="divider" />
+    <img class="relative z-50 lg:-mt-15 -mt-10" src="/divider2.svg" alt="divider" />
 
-    <section class="container mx-auto px-5">
+    <section class="container mx-auto pl-5">
       <!-- SE VIDERE -->
       <section class="intersect:animate-fade-up intersect:duration-[6000ms] lg:mx-0 ml-5">
-        <div>
+        <div class="ml-5">
           <Heading size="large" htmlheading="h2">Se videre</Heading>
 
           <Carousel cards={continueCards} />

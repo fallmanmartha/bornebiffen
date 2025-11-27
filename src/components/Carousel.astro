@@ -52,10 +52,10 @@ const totalCards = cards.length;
         this.active = Math.min(this.active + 1, maxActive);
       }
     }`}
-    class="relative mx-auto mt-10 w-full max-w-screen"
+    class="relative mt-10 "
   >
     <!-- Karrusel container -->
-    <div class="overflow-hidden py-2">
+    <div class="overflow-hidden py-2 -ml-5">
       <div
         class="flex transition-transform duration-500"
         :style="`transform: translateX(-${active * cardWidth}%);`"
@@ -81,7 +81,7 @@ const totalCards = cards.length;
       <>
         <!-- Vänster pil -->
         <button
-          class="absolute left-3 lg:-left-10 top-1/2 flex h-15 w-15 -translate-y-1/2 items-center justify-center rounded-full transition hover:scale-105"
+          class="absolute left-3 lg:-left-15 top-1/2 flex h-15 w-15 -translate-y-1/2 items-center justify-center rounded-full transition hover:scale-105"
           @click="prev()"
         >
           <svg
