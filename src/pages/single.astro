@@ -48,7 +48,12 @@ const similar2Cards = [
       <Heading font="singlelogo" color="dark" size="xlarge" htmlheading="h1"> Rita & Krokodille <br /> - Skovturen </Heading>
 
       <div class="flex gap-2 mt-7">
-        <Tag variant="primary" shadow="effect">5 min</Tag>
+        <Tag variant="primary" shadow="effect">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+          </svg>
+          5 min
+        </Tag>
         <Tag variant="primary" shadow="effect">Rita & Krokodille</Tag>
         <Tag variant="primary" shadow="effect">Tegneserie</Tag>
       </div>
@@ -88,10 +93,15 @@ const similar2Cards = [
       </div>
 
       <div class="grid grid-cols-2 mt-7">
-        <div class="flex flex-col justify-between gap-5">
+        <div class="flex flex-col justify-between gap-2">
           <div>
             <Heading color="dark" size="xsmall" htmlheading="h5">Varighed</Heading>
-            <Text color="dark">8 min </Text>
+            <div class="flex items-center gap-2 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+              </svg>
+              <Text class="flex gap-2" color="dark"> 8 min </Text>
+            </div>
           </div>
 
           <div>
