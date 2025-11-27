@@ -43,7 +43,7 @@ const similar2Cards = [
     <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 via-yellow-400/40 to-transparent"></div>
 
     <!-- Content ovanpå bilden -->
-    <div class="relative z-10 max-w-screen-xl mx-auto h-full flex flex-col justify-center px-10 lg:px-15 lg:mt-0 mt-20">
+    <div class="relative z-10 max-w-screen-xl mx-auto h-full flex flex-col justify-center px-15 lg:px-5 lg:mt-0 mt-20">
       <!-- DIN SEktion Här → Jag bäddar in din exakta kod -->
       <Heading font="singlelogo" color="dark" size="xlarge" htmlheading="h1"> Rita & Krokodille <br /> - Skovturen </Heading>
 
@@ -71,7 +71,7 @@ const similar2Cards = [
   </section>
   <img class="relative z-50 lg:-mt-20 -mt-10" src="/divider2.svg" alt="divider" />
 
-  <section class="lg:mx-20 mx-10 lg:pt-15 lg:mt-0 mt-15 lg:pb-20 p-10 bg-cards-bg-secondary rounded-4xl">
+  <section class="lg:mx-20 mx-10 lg:pt-15 lg:mt-32 mt-20 lg:pb-20 p-10 bg-cards-bg-secondary rounded-4xl intersect:animate-fade-up intersect:duration-[6000ms]">
     <Heading color="dark" size="medium" htmlheading="h3">Rita & Krokodille - Skovturen</Heading>
     <div class="lg:grid lg:grid-cols-2 lg:gap-20">
       <div class="mt-7">
@@ -119,14 +119,14 @@ const similar2Cards = [
     </div>
   </section>
 
-  <section class="lg:px-20 px-5 mt-24">
+  <section class="lg:px-20 px-5 lg:mt-32 mt-20">
     <div>
       <Heading size="large" htmlheading="h2">Flere episoder</Heading>
       <Carousel cards={nextCards} />
     </div>
   </section>
 
-  <section class="lg:px-20 px-5 mt-15">
+  <section class="lg:px-20 px-5 lg:mt-32 mt-20">
     <Heading size="large" htmlheading="h2">Minder om</Heading>
     <div>
       <div class="hidden lg:grid lg:grid-cols-4 gap-10 mt-10">
