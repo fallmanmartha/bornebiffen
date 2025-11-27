@@ -8,7 +8,7 @@ import Heading from "./Heading.astro";
 <header x-data="{ showmenu: false }" class="mt-7 lg:mx-15 mx-5 relative z-50">
   <div id="navbar" class="max-w-full px-14 py-6 flex flex-row justify-between items-center bg-main-bg-nav rounded-4xl">
     <div id="logo" class="w-40">
-      <a href="" class=""><img src="/logo.svg" alt="Børnebiffen Logo" /> </a>
+      <a href="/" class=""><img src="/logo.svg" alt="Børnebiffen Logo" /> </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row items-center gap-4 text-main-text-secondary">
@@ -33,12 +33,16 @@ import Heading from "./Heading.astro";
           </a>
         </li>
 
-        <Button variant="primary" size="small" shadow="noeffect" class="flex items-center gap-2">
-          <svg class="w-6 h-6 text-main-text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
-          </svg>
-          Log ind
-        </Button>
+        <li>
+          <a href="/list">
+            <Button variant="primary" size="small" shadow="noeffect" class="flex items-center gap-2">
+              <svg class="w-6 h-6 text-main-text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
+              </svg>
+              Log ind
+            </Button>
+          </a>
+        </li>
       </ul>
     </nav>
 
