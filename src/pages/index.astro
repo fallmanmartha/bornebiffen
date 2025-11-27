@@ -37,12 +37,14 @@ import Faqcard from "../components/Faqcard.astro";
               </form>
 
               <div class="flex gap-3 mt-5">
-                <Button variant="primary" size="large" shadow="noeffect" class="flex items-center gap-2">
-                  <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
-                  </svg>
-                  Log ind
-                </Button>
+                <a href="/list">
+                  <Button variant="primary" size="large" shadow="noeffect" class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"></path>
+                    </svg>
+                    Log ind
+                  </Button>
+                </a>
                 <Button variant="quaternary" size="large" shadow="effect" class="flex items-center gap-2"> Download appen </Button>
               </div>
             </div>
@@ -62,7 +64,7 @@ import Faqcard from "../components/Faqcard.astro";
     <img class="relative z-50 lg:-mt-20 -mt-10" src="/divider2.svg" alt="divider" />
 
     <!-- TOP FILM SECTION -->
-    <section class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto lg:px-5 px-10">
+    <section class="grid grid-cols-1 lg:grid-cols-4 gap-10 container mx-auto py-3 lg:px-5 px-10 intersect:animate-fade-up intersect:duration-[6000ms]">
       <div class="pr-2">
         <Heading htmlheading="h2" size="large" font="heading" color="light" weight="bold">Topfilm</Heading>
         <Text teksttype="brødtekst" weight="regular" font="body">De mest populære børnefilm lige nu — håndplukket for at underholde, inspirere og skabe gode filmoplevelser for hele familien. </Text>
@@ -79,7 +81,7 @@ import Faqcard from "../components/Faqcard.astro";
     </section>
 
     <!-- ABOUT CHARACTERS SECTION -->
-    <section class="container mx-auto lg:p-5 p-10">
+    <section class="container mx-auto lg:p-5 p-10 intersect:animate-fade-right intersect:duration-[6000ms]">
       <div class="bg-cards-bg-secondary rounded-3xl lg:mt-30 mt-20 p-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
         <!-- Tekst -->
         <div class="mb-0 lg:mb-10">
@@ -109,26 +111,35 @@ import Faqcard from "../components/Faqcard.astro";
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-        <Faqcard
-          title="Hvad er Børnebiffen?"
-          content="Børnebiffen.dk er et bibliotekstilbud skræddersyet til de 3-7 årige og deres forældre. Tjenesten er udviklet og drives i samarbejde mellem DBC Digital og Det Danske Filminstitut og er en del af det samlede Børnebiffen-univers, som formidler kortfilm til børn både i biografen, i børnehaven og derhjemme. "
-          wave="/faqbue2.svg"
-        />
-        <Faqcard
-          title="Hvor ofte kommer der nye film?"
-          content="Børnebiffen.dk rummer næsten 400 titler og vil løbende få tilføjet nye kortfilm. Vi tilføjer som regel nye kortfilm én gang om måneden, så der altid er noget nyt at opdage."
-          wave="/faqbue2.svg"
-        />
-        <Faqcard
-          title="Koster det noget?"
-          content="Nej, det koster ingenting at se film på børnebiffen. Det er gratis for alle, men for at se film skal man logge ind med sit bibliotekslogin. Der er ingen begrænsninger på, hvor mange film man kan se på Børnebiffen.dk."
-          wave="/faqbue2.svg"
-        />
-        <Faqcard
-          title="Er filmene sikre og godkendt til børn?"
-          content="Alle film er nøje udvalgt og gennemgået af fagfolk, så indholdet er trygt, alderssvarende og helt uden reklamer. Børn kan roligt se med, og forældre kan føle sig trygge."
-          wave="/faqbue2.svg"
-        />
+        <div class="intersect:animate-fade-right intersect:duration-[6000ms]">
+          <Faqcard
+            title="Hvad er Børnebiffen?"
+            content="Børnebiffen.dk er et bibliotekstilbud skræddersyet til de 3-7 årige og deres forældre. Tjenesten er udviklet og drives i samarbejde mellem DBC Digital og Det Danske Filminstitut og er en del af det samlede Børnebiffen-univers, som formidler kortfilm til børn både i biografen, i børnehaven og derhjemme. "
+            wave="/faqbue2.svg"
+          />
+        </div>
+
+        <div class="intersect:animate-fade-left intersect:duration-[6000ms]">
+          <Faqcard
+            title="Hvor ofte kommer der nye film?"
+            content="Børnebiffen.dk rummer næsten 400 titler og vil løbende få tilføjet nye kortfilm. Vi tilføjer som regel nye kortfilm én gang om måneden, så der altid er noget nyt at opdage."
+            wave="/faqbue2.svg"
+          />
+        </div>
+        <div class="intersect:animate-fade-right intersect:duration-[6000ms]">
+          <Faqcard
+            title="Koster det noget?"
+            content="Nej, det koster ingenting at se film på børnebiffen. Det er gratis for alle, men for at se film skal man logge ind med sit bibliotekslogin. Der er ingen begrænsninger på, hvor mange film man kan se på Børnebiffen.dk."
+            wave="/faqbue2.svg"
+          />
+        </div>
+        <div class="intersect:animate-fade-left intersect:duration-[6000ms]">
+          <Faqcard
+            title="Er filmene sikre og godkendt til børn?"
+            content="Alle film er nøje udvalgt og gennemgået af fagfolk, så indholdet er trygt, alderssvarende og helt uden reklamer. Børn kan roligt se med, og forældre kan føle sig trygge."
+            wave="/faqbue2.svg"
+          />
+        </div>
       </div>
     </section>
   </main>
